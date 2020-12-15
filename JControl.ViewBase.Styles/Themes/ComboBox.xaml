@@ -1,0 +1,164 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <Style x:Key="xStyle.stryker.Combox.ToggleButton"
+           TargetType="ToggleButton">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="0.2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Background="Transparent" />
+                        <Border BorderThickness="1 0 0 0 "
+                                BorderBrush="{DynamicResource xColor.Stryker.Border.BorderBrush}"
+                                HorizontalAlignment="Right" />
+                        <Border x:Name="Back"
+                                Grid.Column="1"
+                                Background="Transparent"
+                                BorderThickness="1"
+                                BorderBrush="Transparent">
+
+                            <Viewbox Height="15"
+                                     Width="15">
+                                <Polygon x:Name="ic"
+                                         Fill="#FFFFFF"
+                                         Points="0,0 20,0 10,15" />
+                            </Viewbox>
+
+                        </Border>
+                    </Grid>
+                    <!--<ControlTemplate.Triggers>
+                         
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                
+                                
+                                <Setter TargetName="Back"
+                                        Property="Background"
+                                        Value="#59CA4F"></Setter>
+                                
+                                <Setter TargetName="Back"
+                                        Property="BorderBrush"
+                                        Value="#59CA4F"></Setter>
+                                
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style 
+           TargetType="ComboBox">
+        <!--comboxitem-->
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="MinHeight"
+                            Value="50" />
+                    <Setter Property="Background"
+                            Value="Transparent" />
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource xColor.Stryker.Controls.Default.Foreground}" />
+                    <Setter Property="FontSize"
+                            Value="16" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ComboBoxItem">
+                                <Border x:Name="bd"
+                                        BorderThickness="0 0 0 1"
+                                        Background="Transparent"
+                                        BorderBrush="{DynamicResource xColor.Stryker.Controls.Default.BorderBrush}">
+
+                                    <ContentPresenter ContentSource="{Binding Source}"
+                                                      VerticalAlignment="Center"
+                                                      HorizontalAlignment="Left"
+                                                      Margin="10,0,0,0" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+
+                                    <Trigger Property="IsHighlighted"
+                                             Value="True">
+
+                                        <Setter TargetName="bd"
+                                                Property="Background"
+                                                Value="{DynamicResource xColor.Stryker.Controls.Default.HighLight}" />
+
+                                    </Trigger>
+
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                </Style>
+            </Setter.Value>
+
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Border BorderThickness="1"
+                                Grid.ColumnSpan="2"
+                                Background="{DynamicResource xColor.Stryker.Controls.Default.Background}"
+                                BorderBrush="{DynamicResource xColor.Stryker.Controls.Default.BorderBrush}"
+                                CornerRadius="5" />
+                        <TextBlock  Grid.Column="0"
+                                    Foreground="{DynamicResource xColor.Stryker.Controls.Default.Foreground}"
+                                    FontSize="16"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 0 0 0"
+                                    Text="{TemplateBinding Text}" />
+
+                        <ToggleButton Grid.ColumnSpan="2"
+                                      Panel.ZIndex="1"
+                                      Style="{DynamicResource xStyle.stryker.Combox.ToggleButton}"
+                                      IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                      ClickMode="Press">
+                        </ToggleButton>
+
+                        <Popup IsOpen="{TemplateBinding IsDropDownOpen}"
+                               Placement="Bottom"
+                               x:Name="Popup"
+                               Focusable="False"
+                               AllowsTransparency="True"
+                               PopupAnimation="Slide">
+
+                            <Border BorderThickness="1 0"
+                                    Background="{DynamicResource xColor.Stryker.Controls.Default.Background}"
+                                    BorderBrush="{DynamicResource xColor.Stryker.Controls.Default.BorderBrush}"
+                                    MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                                    MinWidth="{TemplateBinding ActualWidth}"
+                                    x:Name="DropDown"
+                                    SnapsToDevicePixels="True">
+
+                                <ScrollViewer Margin="0"
+                                              Style="{DynamicResource ScrollViewerStyle}"
+                                              MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                                              SnapsToDevicePixels="True"
+                                              HorizontalScrollBarVisibility="Auto"
+                                              VerticalScrollBarVisibility="Auto"
+                                              CanContentScroll="True">
+
+                                    <!-- StackPanel 用于显示子级，方法是将 IsItemsHost 设置为 True -->
+
+                                    <StackPanel IsItemsHost="True"
+                                                KeyboardNavigation.DirectionalNavigation="Contained"
+                                                Background="Transparent" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

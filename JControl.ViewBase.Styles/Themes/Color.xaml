@@ -1,0 +1,160 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+
+    <Color x:Key="xColorBase.Stryker.White">#fff</Color>
+    <Color x:Key="xColorBase.Stryker.Black">#000</Color>
+
+    <Color x:Key="xColorBase.Stryker.Gray1">#a8a8a8</Color>
+    <Color x:Key="xColorBase.Stryker.Gray2">#717171</Color>
+    <Color x:Key="xColorBase.Stryker.Gray3">#676767</Color>
+    <Color x:Key="xColorBase.Stryker.Gray4">#4a4a4a</Color>
+    <Color x:Key="xColorBase.Stryker.Gray5">#232323</Color>
+    <Color x:Key="xColorBase.Stryker.Gray6">#1d1d1d</Color>
+    <Color x:Key="xColorBase.Stryker.Gray7">#161616</Color>
+    <Color x:Key="xColorBase.Stryker.Gray11">#757575</Color>
+    <!--Update-->
+    <Color x:Key="xColorBase.Stryker.Gray8">#515151</Color>
+    <Color x:Key="xColorBase.Stryker.Gray9">#252525</Color>
+    <Color x:Key="xColorBase.Stryker.Gray10">#2f2f2f</Color>
+
+    <Color x:Key="xColorBase.Stryker.Blue1">#0da9ff</Color>
+    <Color x:Key="xColorBase.Stryker.BlackA75">#db000000</Color>
+    
+    <!--Stryker Border-->
+    <SolidColorBrush x:Key="xColor.Stryker.Border.BorderBrush"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+    <SolidColorBrush x:Key="xColor.Stryker.Border.Title.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}"/>
+    <SolidColorBrush x:Key="xColor.Stryker.Border.Content.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray5}" />
+    
+    <!--stryer menu border-->
+
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Border.Background" 
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}"
+                     />
+
+    <SolidColorBrush x:Key="xColor.Stryker.Logo"
+                     Color="{DynamicResource xColorBase.Stryker.Gray3}" />
+    <SolidColorBrush x:Key="xColor.Primary.BottomBar.Menu.RadioButton.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}" />
+    <SolidColorBrush x:Key="xColor.Primary.BottomBar.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray7}" />
+    <SolidColorBrush x:Key="xColor.Primary.BottomBar.Menu.RadioButton.Broder"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+    <SolidColorBrush x:Key="xColor.Primary.BottomBar.Menu.RadioButton.IsChecked"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+    
+    <SolidColorBrush x:Key="xColor.Primary.BottomBar.Menu.RadioButton.Foreground"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+
+    <SolidColorBrush x:Key="xColor.Primary.Default"
+                     Color="{DynamicResource xColorBase.Stryker.Gray6}" />
+
+    <SolidColorBrush x:Key="xColor.Primary.Foreground.Default"
+                     Color="#a8a8a8" />
+    <SolidColorBrush x:Key="xColor.Primary.Foregound.Checked"
+                     Color="{DynamicResource xColorBase.Stryker.White}"/>
+    
+    <!--sub view-->
+
+    <SolidColorBrush x:Key="xColor.Stryker.View.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray5}" />    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.View.TopBar"
+                     Color="#4a4a4a" />    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.View.SliderMenu"
+                     Color="{DynamicResource xColorBase.Stryker.Gray7}" />
+    <!--stryker pop menu-->
+    <SolidColorBrush x:Key="xColor.Stryker.PopMenu.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray6}" />
+    <!--stryker pop page-->
+    
+    <SolidColorBrush x:Key="xColor.Stryker.PopPage.Outside.Background"
+                     Color="{DynamicResource xColorBase.Stryker.BlackA75}" />    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.PopPage.Inside.Border"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.PopPage.Inside.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray5}" />    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.PopPage.Title.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}" />    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.PopPage.Title.Foreground"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+
+    <!--stryker button close-->
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Button.Close.Border"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+    <SolidColorBrush x:Key="xClose.Stryker.Button.Close.Foreground"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+    <SolidColorBrush x:Key="xClose.Stryker.Button.Close.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}" />    
+    <SolidColorBrush x:Key="xClose.Stryker.Button.Close.MouseOver"
+                     Color="{DynamicResource xColorBase.Stryker.Gray8}" />
+    
+    <!-- stryker default textbox-->  
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.Foregound.Default"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.CaretBrush.Default"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.Background.Default"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" /> 
+    
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.Border.Default"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.IsFocused.Default"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.TextBox.SelectionBrush.Default"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+    
+    <SolidColorBrush x:Key="xColor.Stryker.HighLight"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.UserControl.Preview.Grid.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray2 }" />
+    
+        
+    <!--*****************************-->
+    <SolidColorBrush x:Key="xColor.Stryker.Controls.Default.HighLight"
+                     Color="{DynamicResource xColorBase.Stryker.Blue1}" />
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Controls.Default.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.Controls.Default.BorderBrush"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+
+    <SolidColorBrush x:Key="xClose.Stryker.Controls.Default.MouseOver"
+                     Color="{DynamicResource xColorBase.Stryker.Gray8}" />
+
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Controls.Default.Foreground"
+                     Color="{DynamicResource xColorBase.Stryker.White}" />
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Media.Default.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />       
+    
+    
+    <SolidColorBrush x:Key="xColor.Stryker.Group.Default.BorderBrush"
+                     Color="{DynamicResource xColorBase.Stryker.Gray4}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.Group.Default.Background"
+                     Color="{DynamicResource xColorBase.Stryker.Black}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.ComputerItem.MouseOverBackground"
+                     Color="{DynamicResource xColorBase.Stryker.Gray7}" />
+
+    <SolidColorBrush x:Key="xColor.Stryker.UnderLine"
+                     Color="{DynamicResource xColorBase.Stryker.Gray11}" />
+</ResourceDictionary>
